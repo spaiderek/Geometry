@@ -6,10 +6,6 @@ Circle::Circle(double r)
 {
     radius = r;
 }
-double Circle::getRadius()const
-{
-    return radius;
-}
 void Circle::setRadius (double r)
 {
     radius = r;
@@ -24,13 +20,10 @@ double Circle::getPerimeter() const
 }
 
 
+
 Square::Square(int len)
 {
     length = len;
-}
-int Square::getLength()const
-{
-    return length;
 }
 void Square::setLength(int len)
 {
@@ -43,4 +36,24 @@ int Square::getArea() const
 int Square::getPerimeter() const
 {
     return 4 * length ;
+}
+
+
+Rectangle::Rectangle(int lenL, int lenS)
+{
+    lengthLonger = lenL;
+    lengthShorter = lenS;
+}
+void Rectangle::setLength(int lenL, int lenS)
+{
+    lengthLonger = lenL;
+    lengthShorter = lenS;
+}
+int Rectangle::getArea() const
+{
+    return lengthLonger * lengthShorter;
+}
+int Rectangle::getPerimeter() const
+{
+    return (2 * lengthShorter) + (2 * lengthLonger);
 }

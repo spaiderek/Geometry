@@ -11,7 +11,7 @@ private:
 
 public:
     Square(int length = 0);
-    int getLength()const;
+
     void setLength(int length);
     int getArea()const;
     int getPerimeter()const;
@@ -25,10 +25,21 @@ private:
 public:
     Circle(double radius = 0);
 
-    double getRadius()const;
     void setRadius(double radius);
     double getArea()const;
     double getPerimeter()const;
+};
+class Rectangle
+{
+private:
+    int lengthLonger,lengthShorter, area;
+
+public:
+    Rectangle(int lengthLonger = 0, int lengthShorter=0);
+
+    void setLength(int lengthLonger, int lengthShorter);
+    int getArea()const;
+    int getPerimeter()const;
 };
 
 #endif //GEOMETRY_FIGURES_H
